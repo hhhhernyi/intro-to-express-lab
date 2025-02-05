@@ -48,7 +48,9 @@ app.get('/collectibles/:index', (req, res) => {
         { name: "Jet Boots", price: 1000, type: "boot" },
         { name: "Fifty-Inch Heels", price: 175, type: "heel" }
     ];
-    res.send(`this is min price ${req.query.min-price}`)
+
+    res.send(`the min price is ${req.query['min-price']}, the max price is ${req.query['min-price']} and the type is ${req.query['price']}`)
+    // not sure how to render the whole list of shoes array, thinking if need to use home.ejs and use for loop while passing shoes as locals
 
     
   });
